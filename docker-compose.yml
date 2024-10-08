@@ -1,4 +1,3 @@
-version: "3.9"
 
 services:
   angular:
@@ -24,9 +23,8 @@ services:
       - symfony
 
   mysql:
-    image: mysql:latest
+    image: mysql:9.0.1
     restart: always
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       - MYSQL_DATABASE=jardin_actuel
       - MYSQL_ROOT_PASSWORD=jardin
