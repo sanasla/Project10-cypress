@@ -35,6 +35,7 @@ it(" TEST_2 Vérifier la présence button d'ajouter au panier' et la disponibili
  cy.get("button").eq(0).should("contain", "Consulter").click();
 
   // Vérifier la présence bouton "ajouter au panier" et du champ de disponibilité du produit.
-
+  cy.getBySel("detail-product-add").should("be.visible");
+  cy.getBySel("detail-product-stock").should("be.visible");
 
 });
