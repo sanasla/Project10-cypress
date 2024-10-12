@@ -23,9 +23,22 @@ describe("api login request", () => {
      
     });
 
+    it("TEST 2_Retourne un code de statut 200 pour un utilisateur connu", () => {
+        // Envoyer une requête POST au endpoint de login avec des identifiants corrects
+        cy.request({
+          method: "POST",
+          url: `${Cypress.env("apiUrl")}/login`,
+          body: {
+            username: "test2@test.fr",
+            password: "testtest",
+          },
+        }).then((response) => {
+          // Vérifier que la réponse contient un code de statut 200
+          expect(response.status).to.eq(200);
+        });
+
+    });
 
 
 
-
-    
   });
