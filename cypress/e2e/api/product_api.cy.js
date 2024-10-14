@@ -9,7 +9,8 @@ describe("Test API / Produits ", () => {
         });
       });
 
-      it("TEST 2_GET / liste produits ID  ", () => {
+
+    it("TEST 2_GET / liste produits ID  ", () => {
         const productId = 4; // En chiffre pas de chaine de caractère "4"
         cy.request("GET", `${apiProduct}/${productId}`).then((response) => {
         expect(response.status).to.eq(200);
