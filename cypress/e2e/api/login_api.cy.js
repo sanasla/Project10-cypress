@@ -66,14 +66,6 @@ describe("api login request", () => {
     });
 
 
-
-
-
-
-
-
-
-
     it("TEST 2_Retourne un code de statut 200 pour un utilisateur connu", () => {
         // Envoyer une requête POST au endpoint de login avec des identifiants corrects
         cy.request({

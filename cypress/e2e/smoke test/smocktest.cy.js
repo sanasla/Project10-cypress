@@ -1,6 +1,6 @@
 describe('smoke test_test5', () => {
   it('vérifiez la présence des champs et boutons de connexion ', () => {
-    cy.visit('http://localhost:8080/#/')
+    cy.visit("")
 
      // Find the connexion button and click it
  
@@ -22,7 +22,7 @@ describe('smoke test_test5', () => {
 
 it(" TEST_2 Vérifier la présence button d'ajouter au panier' et la disponibilitée du produit login ok", () => {
   // Connection avec Email et MdP
-  cy.visit('http://localhost:8080/#/')
+  cy.visit("")
   cy.getBySel("nav-link-login").click();
   cy.getBySel("login-input-username").type("test2@test.fr");
   cy.getBySel("login-input-password").type("testtest");
