@@ -1,19 +1,16 @@
-# Installation du projet
-1. Téléchargez ou clonez le dépôt
-2. Depuis un terminal ouert dans le dossier du projet, lancer la commande : `sudo docker-compose up --build`
-3. Ouvrez le site depuis la page http://localhost:8080 
 
-Eco-Bliss-Bath
+
+**Eco-Bliss-Bath**
 
 Eco Bliss Bath est une start-up de 20 personnes, spécialisée dans la vente de produits de beauté écoresponsables dont le produit principal est un savon solide.
 
 La boutique prépare un site de vente en ligne.
 
-Prérequis:
+**Prérequis**
 Pour  lancer et faire fonctionner le projet, vous aurez besoin de Docker, Node.js, NPM (ou autre gestionnaire de paquets tel que yarn), Cypress et votre navigateur préféré (Chrome et/ou Firefox recommandés)
 
 
-Procédure pour l'exécution du projet:
+**Procédure pour l'exécution du projet**
 1-Cloner le projet:
     git clone https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git
 
@@ -30,7 +27,8 @@ Procédure pour l'exécution du projet:
     npm install
     npm start
 
-Procédure pour lancer les tests
+**Procédure pour lancer les tests**
+
 1-Installer Cypress:
     Installer la librairie Cypress en saisissant la commande suivante dans votre terminal (toujours à la racine du projet) : npm install cypress --save-dev
 
@@ -39,14 +37,15 @@ Procédure pour lancer les tests
     Pour lancer tous les tests présents dans le dossier Cypress sans lancer l'interface et obtenir un rapport de test, saisir la commande : npx cypress run
 
 
-Infos login:
+**Infos login**
     Identifiant: test2@test.fr
     Mot de passe : testtest
 
-Infos API: 
-    Le swagger du projet se trouve à l'adresse suivante :
-    http://localhost:8081/api/doc
+**Infos API** 
+    Le swagger du projet se trouve à l'adresse suivante : [Lien swagger](http://localhost:8081/api/doc)
 
-Auteur:
+
+
+**Auteur**
     Sana Slama
-    email: 
+    email: sana.slama2017@gmail.com
