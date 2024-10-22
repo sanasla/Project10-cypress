@@ -55,7 +55,21 @@ Pour le lancement du projet vous aurez besoin de Docker, Node.js, NPM, Cypress e
 
         npx cypress open
 
-- Pour lancer tous les tests présents dans le dossier Cypress sans lancer l'interface et obtenir un rapport de test, saisir la commande : 
+
+
+
+## Procédure pour la génération du rapport
+Pour exécuter les tests avec Cypress et générer un rapport des résultats, suivez les étapes ci-dessous :
+
+
+
+1 - Ouvrez un terminal de commande.
+- Assurez-vous que Node.js est installé sur votre machine et que Cypress est configuré dans votre projet.
+
+2 -Accédez au répertoire du projet cloné.
+
+3- Tapez la commande suivante pour exécuter les tests et générer un rapport
+
 
         npx cypress run
 
