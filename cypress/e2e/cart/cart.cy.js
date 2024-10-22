@@ -1,7 +1,7 @@
 describe('les tests effectués sur le panier', () => {
    
     const apiLogin=`${Cypress.env("apiUrl")}/login`;
-    it('placer un produit dans le panier malgré il est en rupture de stock ', () => {
+    it('Test1 : placer un produit  rupture de stock dans le panier ', () => {
 
         cy.login(); //Sur la page du site connecté configuré dans dossier support puis commond .js
         
@@ -33,7 +33,7 @@ describe('les tests effectués sur le panier', () => {
      })
 
 
-    it("ajouter un produit au panier et le supprimer ", () => {
+    it("Test 2: ajouter un produit au panier et le supprimer ", () => {
         cy.login(); //Sur la page du site connecté configuré dans dossier support puis commond .js
         
         cy.getBySel("nav-link-products").should("be.visible");
@@ -55,7 +55,7 @@ describe('les tests effectués sur le panier', () => {
     });
     
 
-    it("TEST ne pas permettre d'ajouter au panier un produit avec un stock negative ", () => {
+    it("TEST 3: ajouter au panier un produit avec un stock negative ", () => {
         cy.login(); 
 
         // Navigate to product page and add product
@@ -80,7 +80,7 @@ describe('les tests effectués sur le panier', () => {
 
     });
 
-    it("TEST  ne pas permettre d'ajouter un produit avec un stock egale a 0 ", () => {
+    it("TEST 4: ajouter un produit avec un stock egale a 0 ", () => {
         cy.login();
       
         cy.getBySel("nav-link-products").should("be.visible");
@@ -104,7 +104,7 @@ describe('les tests effectués sur le panier', () => {
           .and("contain", "Votre panier est vide");
     });
 
-    it("TEST _Ajouter une quantité supérieur au stock ", () => {
+    it("TEST 5: Ajouter une quantité supérieur au stock ", () => {
         cy.login();
         cy.getBySel("nav-link-products").should("be.visible");
      

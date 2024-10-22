@@ -25,7 +25,7 @@ describe("S'inscrire", () => {
       });
 
      
-    it("TEST 2_Inscription sans remplir champ nom ", () => {
+    it("TEST 2: Inscription sans remplir champ nom ", () => {
         cy.visit("http://localhost:8080/#/register");
         cy.getBySel("register-input-firstname").type(fakeFirstName);
         cy.getBySel("register-input-email").type(fakeEmail);
@@ -39,7 +39,7 @@ describe("S'inscrire", () => {
     });
 
 
-    it("TEST 3_Inscription sans remplir email ", () => {
+    it("TEST 3: Inscription sans remplir email ", () => {
             cy.visit("http://localhost:8080/#/register");
             cy.getBySel("register-input-lastname").type(fakeLastName);
             cy.getBySel("register-input-firstname").type(fakeFirstName);
@@ -52,7 +52,7 @@ describe("S'inscrire", () => {
 
         });
 
-    it("TEST 2_Inscription sans password confirm ", () => {
+    it("TEST 4: Inscription sans password confirm ", () => {
             cy.visit("http://localhost:8080/#/register");
             cy.getBySel("register-input-lastname").type(fakeLastName);
             cy.getBySel("register-input-firstname").type(fakeFirstName);

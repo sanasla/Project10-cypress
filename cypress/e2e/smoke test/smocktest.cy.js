@@ -1,5 +1,5 @@
-describe('smoke test_test5', () => {
-  it('vérifiez la présence des champs et boutons de connexion ', () => {
+describe('smoke test', () => {
+  it('Test1: vérifiez la présence des champs et boutons de connexion ', () => {
     cy.visit("")
 
      // Find the connexion button and click it
@@ -20,7 +20,7 @@ describe('smoke test_test5', () => {
   })
 })
 
-it(" TEST_2 Vérifier la présence button d'ajouter au panier' et la disponibilitée du produit login ok", () => {
+it(" TEST 2: Vérifier la présence button d'ajouter au panier' et la disponibilitée du produit login ok", () => {
   // Connection avec Email et MdP
   cy.visit("")
   cy.getBySel("nav-link-login").click();

@@ -1,4 +1,4 @@
-describe("TEST 1_Acces panier/ Order sans authentification ", () => {
+describe("TEST 1: Acces panier sans authentification ", () => {
     it(" page 401 error ", () => {
       cy.request({
         url: `${Cypress.env("apiUrl")}/orders`,
@@ -17,7 +17,7 @@ describe("TEST 1_Acces panier/ Order sans authentification ", () => {
   
     const apiLogin=`${Cypress.env("apiUrl")}/login`;
 
-    it("Statut 200 après avoir ajouté un produit au panier", () => {
+    it("Ajouter un produit disponible au panier avec connexion", () => {
         // Se connecter pour obtenir un jeton d'authentification
         cy.request({
             method: 'POST', 

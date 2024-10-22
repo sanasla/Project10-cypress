@@ -4,8 +4,8 @@ const email= faker.internet.email(); //créer un email
 console.log('email:', email);
 console.log('password:', password);
 
-describe('login', () => {
-  it('email et password incorrecte avec faker ', () => {
+describe('tester la connexion', () => {
+  it('Test 1: Login avec email et password incorrecte en utilisant faker ', () => {
     cy.visit("")
     cy.getBySel("nav-link-login").click();
     cy.getBySel("login-input-username").type(email);
@@ -16,14 +16,14 @@ describe('login', () => {
   
   })
   
-  it("TEST 2 les deux champs vides - apparition de msg Merci de remplir correctement tous les champs-", () => {
+  it("TEST 2 :login avec les deux champs vides et apparition de msg Merci de remplir correctement tous les champs", () => {
       cy.visit("");
       cy.getBySel("nav-link-login").click();
       cy.getBySel("login-submit").click();
       cy.contains("Merci de remplir correctement tous les champs").should("be.visible");
   });
 
-  it("enter an incorrect password", () => {
+  it("TEST 3: login avec un mot de passe invalide", () => {
     cy.visit("");
     cy.getBySel("nav-link-login").click();
     cy.getBySel("login-input-username").type("test2@test.fr");
@@ -32,12 +32,8 @@ describe('login', () => {
     cy.contains("Identifiants incorrects").should("be.visible");
   });
   
-  it("enter an mail et mot passe valides", () => {
-    cy.visit("");
-    cy.getBySel("nav-link-login").click();
-    cy.getBySel("login-input-username").type("username");
-    cy.getBySel("login-input-password").type(" password");
-    cy.getBySel("login-submit").click();
+  it("tEST 4: login avec un e-mail et un mot de passe valides", () => {
+    cy.login();
 
   });
   

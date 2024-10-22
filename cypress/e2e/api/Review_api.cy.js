@@ -1,7 +1,7 @@
 describe("Ajouter un avis ", () => {
 
     const apiLogin=`${Cypress.env("apiUrl")}/login`;
-    it("TEST 1_Ajouter un avis avec valid token ", () => {
+    it("TEST 1: Ajouter un avis avec valid token ", () => {
         cy.request({
             method: 'POST', 
             url: apiLogin,
@@ -36,7 +36,7 @@ describe("Ajouter un avis ", () => {
 
      
 
-it("TEST 1_Ajouter un avis sans authentification ", () => {
+it("TEST 2: Ajouter un avis sans authentification ", () => {
 
         cy.request({
         method: "POST",

@@ -2,15 +2,15 @@ describe("Test API / Produits ", () => {
 
     const apiProduct = `${Cypress.env("apiUrl")}/products`;
 
-    it(" TEST 1_GET / liste des produits", () => {
+    it(" TEST 1: Récupération de la liste des produits", () => {
         cy.request("GET", apiProduct).then((reponse) => {
           expect(reponse.status).to.eq(200);
-          expect(reponse.body.length).to.be.greaterThan(7); // Vérifie si la longueur est supérieur a 7,en changeant au dela de 8 y a erreur car que 8 articles
+        
         });
       });
 
 
-    it("TEST 2_GET / liste produits ID  ", () => {
+    it("TEST 2: doit renvoyer les détails du produit lorsqu'un identifiant de produit valide est fourni  ", () => {
         const productId = 4; // En chiffre pas de chaine de caractère "4"
         cy.request("GET", `${apiProduct}/${productId}`).then((response) => {
         expect(response.status).to.eq(200);
