@@ -16,16 +16,18 @@ Pour le lancement du projet vous aurez besoin de Docker, Node.js, NPM, Cypress e
 1- Cloner le projet:
 
 
-*[Git clone ](https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git)*
+- *[Git clone ](https://github.com/OpenClassrooms-Student-Center/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git)*
 
 
 2- Lancer de Backend:
 
 - Lancer Docker desktop
 
-- Lancer votre terminal de commande dans le dossier racine du projet et saisir la commande "docker-compose up" afin de lancer le back-end
+- Lancer votre terminal de commande dans le dossier racine du projet et saisir la commande 
 
-- Saisir *docker-compose down * afin de stopper le back-end
+  *docker-compose up* afin de lancer le back-end
+
+- Saisir *docker-compose down* afin de stopper le back-end
 
 - Vous pouvez désormais consulter le site à l'adresse suivante : Http://localhost:8080
 
@@ -73,7 +75,7 @@ Le swagger du projet se trouve à l'adresse suivante : [Lien swagger](http://loc
 
 Sana Slama
 
-email: sana.slama2017@gmail.com
+Email: sana.slama2017@gmail.com
 
 ## Hitorique des versions
 
