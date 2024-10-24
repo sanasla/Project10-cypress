@@ -7,10 +7,10 @@ describe("api login request", () => {
         cy.request({
           method: 'POST', // Méthode de la requête
           url: apiLogin,// URL cible 
-          body: {
+          body: { // Les données à envoyer
              username: "utilisateur_inconnu",
              password: "mot_de_passe_incorrect",
-           }, // Les données à envoyer
+           }, 
 
           failOnStatusCode: false, // Ne pas échouer le test si le code de statut n'est pas 200
        

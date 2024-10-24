@@ -1,12 +1,14 @@
 describe('smoke test', () => {
   it('Test1: vérifiez la présence des champs et boutons de connexion ', () => {
+
+    // acceder a la page d'aceuil de site
     cy.visit("")
 
-     // Find the connexion button and click it
+     // TRouver le lien de navigation et faire un click
  
      cy.getBySel("nav-link-login").click(); // Clic "connection nav-link"
     
-     // assertions here to verify the action
+     // assertion pour verifier que url contient login
      cy.url().should('include', '/login')
       // Vérifier la présence du champ email
       cy.getBySel("login-input-username").should("be.visible");

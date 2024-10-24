@@ -7,14 +7,14 @@ describe('les tests effectués sur le panier', () => {
         
         cy.getBySel("nav-link-products").should("be.visible");
        
-        cy.visit("/#/products/4");// visit l article id4
+        cy.visit("/#/products/4");// visit l article cible avec id4 que je connait son stock egale -1
       
-          // Vérifie que le stock a été réduit du nombre de produits ajoutés au panier
+          // Vérifie que le produit est bien en rupture de stock par cette assertion
           cy.getBySel("detail-product-stock") 
           .should("exist")
           .and("contain", "-1");
 
-
+          // Tentative d'ajout au panier
         cy.getBySel("detail-product-quantity").clear().type("1");
         cy.getBySel("detail-product-add").click();
        
@@ -108,7 +108,7 @@ describe('les tests effectués sur le panier', () => {
         cy.login();
         cy.getBySel("nav-link-products").should("be.visible");
      
-        cy.visit("/#/products/8");// visit l article id 8
+        cy.visit("/#/products/8");// visit l article id 8 qui cntient 6 articile enb stock
     
         // Vérifie que le stock est egale a 6
         cy.getBySel("detail-product-stock") 
@@ -135,9 +135,6 @@ describe('les tests effectués sur le panier', () => {
     
     });
 
-
-
- 
 
 })
 

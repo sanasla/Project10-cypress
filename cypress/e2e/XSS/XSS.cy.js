@@ -11,10 +11,15 @@ describe("XSS test de vulnérabilité ", () => {
         cy.getBySel("review-input-title").type("Ceci est injecter un script malveillant");
         cy.getBySel("review-input-comment").type(malveillantScript);
 
+        cy.screenshot("before submit")
         //envoyer l'avis
-            cy.getBySel("review-submit").click();
+        cy.getBySel("review-submit").click();
+        cy.wait(1000);
+        cy.screenshot("after submit")
          // Vérifiez que le script malveillant n'est pas présent dans le contenu de l'avis
-             cy.getBySel("review-comment").should("not.contain", maliciousScript);
+         cy.getBySel("review-comment").should("not.contain", malveillantScript);
+         cy.getBySel("review-title").should("not.contain", "Ceci est injecter un script malveillant");
+         cy.screenshot()
      
     });
 

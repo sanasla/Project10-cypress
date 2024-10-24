@@ -4,7 +4,7 @@ describe("TEST 1: Acces panier sans authentification ", () => {
         url: `${Cypress.env("apiUrl")}/orders`,
         headers: {
  
-          Authorization: "", //// En-tête Authorization vide pour spécifier que l'utilisateur n'est pas connecté
+         Authorization: "", //// En-tête Authorization vide pour spécifier que l'utilisateur n'est pas connecté
         },
         failOnStatusCode: false, // Permet de ne pas échouer si la reponse n'est pas 200
       }).then((response) => {
